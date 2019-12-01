@@ -1,0 +1,23 @@
+<div>
+    <!-- Category Selector -->
+    <div class="tabs is-centered is-boxed">
+        <ul>
+            <li ng-repeat="(catId, value) in datasource.categories" ng-click="selectCategory_Click(catId)">
+                <a>
+                    <span class="icon is-small">
+                        <i class="fa fa-mobile"></i>
+                    </span>
+                    <span>{{catId}}</span>
+                </a>
+            </li>
+
+        </ul>
+    </div>
+
+    <a class="panel-block is-active" ng-click="$parent.selectSubCategory_Click(subCatId ,subCat)" ng-repeat="(subCatId,subCat) in datasource.categories[selectedCategoryId]">
+        <span class="panel-icon">
+            <i class="fa fa-cube"></i>
+        </span>
+        {{subCat.caption}}
+    </a>
+</div>

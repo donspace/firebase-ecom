@@ -1,0 +1,101 @@
+<div class="columns">
+    <div class="column is-3" style="background-color:gold">
+        <aside class="menu">
+            <p class="menu-label">
+                General
+            </p>
+            <ul class="menu-list">
+                <li>
+                    <a class="is-active" style="background-color:black">Profile</a>
+                </li>
+                <li>
+                    <a>Preferences</a>
+                </li>
+            </ul>
+            <p class="menu-label">
+                Administration
+            </p>
+            <ul class="menu-list">
+                <li>
+                    <a class="clickable-item-click">Users and Roles</a>
+                </li>
+
+                <li>
+                    <a>Web Page Settings</a>
+                </li>
+                <li>
+                    <a>Advertisement Settings</a>
+                </li>
+                <li>
+                    <a>Promotion Settings</a>
+                </li>
+            </ul>
+            <p class="menu-label">
+                Advanced Settings
+            </p>
+            <ul class="menu-list">
+                <li>
+                    <a href='#target1' class='target'>Payments</a>
+                </li>
+                <li href='#target2' class='target'>
+                    <a>Security</a>
+                </li>
+            </ul>
+        </aside>
+    </div>
+    <div class="column is-9">
+        <div class="columns">
+            <div class="column is-12">
+                <nav class="level">
+                    <!-- Left side -->
+                    <div class="level-left">
+                        <div class="level-item">
+                            <p class="subtitle is-5">
+                                <strong> Profile Settings</strong>
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <!-- Right side -->
+                    <div class="level-right">
+
+                        <p class="level-item is-pulled-right is-marginless">
+                            <a class="button is-success" ng-if="isLocked" ng-click="onClickEdit()">
+                                <span class="icon is-small">
+                                    <i class="fas fa-edit"></i>
+                                </span>
+                                <span>Edit</span>
+                            </a>
+                        </p>
+                        <p class="level-item is-pulled-right" >
+                            <a class="button is-info" ng-if="!isLocked" ng-click="onClickCancel()">
+                                <span class="icon is-small">
+                                    <i class="fas fa-edit"></i>
+                                </span>
+                                <span>Cancel</span>
+                            </a>
+                        </p>
+                        <p class="level-item is-pulled-right">
+                            <a class="button is-danger" ng-if="!isLocked"  ng-click="showModal()" ng-disabled="isSaveDisabled" >
+                                <span class="icon is-small">
+                                    <i class="fas fa-save"></i>
+                                </span>
+                                <span>Save</span>
+                            </a>
+                        </p>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="columns">
+            <div class="column is-12">
+                <div ui-view></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<dynamic-modal></dynamic-modal>
+
+<h1 ng-class="{'is-active': modalAddClass}">is dirty  : {{profileSettings.$dirty}}</h1>

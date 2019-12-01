@@ -1,0 +1,49 @@
+<div class="modal" ng-class="{'is-active': $parent.dmpwverifyVisibility}">
+    <div class="modal-background" ng-click="hideModal()"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Are you sure ?</p>
+            <button class="delete" aria-label="close" ng-click="hideModal()"></button>
+        </header>
+        <section class="modal-card-body">
+
+            <!-- Content ... -->
+            <form id="pwform" ng-submit="hideModal(); $parent.verifyByPassword(pWord)" >
+                <div class="columns">
+                    <div class="column is-2"></div>
+                    <div class="column is-8">
+                        <nav class="level">
+                            <!-- Left side -->
+                            <div class="level-left">
+                                <div class="level-item">
+                                    <p class="subtitle is-5">
+                                        Verification Password
+                                    </p>
+                                </div>
+                                <div class="level-item">
+                                    <div class="field">
+                                        <p class="control has-icons-left">
+                                            <input class="input" type="password" placeholder="Password" ng-model="pWord">
+                                            <span class="icon is-small is-left">
+                                                <i class="fas fa-lock"></i>
+                                            </span>
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="column is-2"></div>
+                </div>
+            </form>
+
+
+
+        </section>
+        <footer class="modal-card-foot">
+            <button class="button is-danger" type="submit" id="pwform">Verify By Password</button>
+            <button class="button">Cancel</button>
+        </footer>
+    </div>
+</div>

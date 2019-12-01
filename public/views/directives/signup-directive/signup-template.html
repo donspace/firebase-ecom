@@ -1,0 +1,113 @@
+<div>
+    <form name="signupForm" ng-if="!loginFormVisibility"  ng-submit="signupClick(signupForm.$valid)">
+        Signup
+        <div class="field">
+            <label class="label">Email or Mobile Number</label>
+            <div class="control has-icons-left has-icons-right">
+                <input class="input is-success" type="email" placeholder="Email or Mobile Number" ng-model="newUser.username">
+                <span class="icon is-small is-left">
+                    <i class="fa fa-envelope"></i>
+                </span>
+            </div>
+            <!-- <p class="help is-success">This username is available</p> -->
+        </div>
+    
+        <div class="field">
+            <label class="label">Name</label>
+            <div class="control">
+                <input class="input" type="text" placeholder="Full Name" ng-model="newUser.displayName">
+            </div>
+        </div>
+    
+        <div class="field">
+            <label class="label">Password</label>
+            <div class="control has-icons-left has-icons-right">
+                <input class="input is-danger" type="password" placeholder="Password" ng-model="newUser.password">
+                <span class="icon is-small is-left">
+                    <i class="fa fa-lock"></i>
+                </span>
+    
+            </div>
+            <!-- <p class="help is-danger">This email is invalid</p> -->
+        </div>
+    
+    
+        <div class="field">
+            <div class="control">
+                <label class="checkbox">
+                    <input type="checkbox"> I agree to the
+                    <a href="#">terms and conditions</a>
+                </label>
+            </div>
+        </div>
+    
+    
+    
+        <div class="field is-grouped">
+            <div class="control">
+                <button type="submit" class="button is-link">Create</button>
+            </div>
+        </div>
+        <br> Create an account directly with
+        <br/>
+    
+        <a href="#" class="fa fa-facebook social-media-icon"></a>
+        <a href="#" class="fa fa-twitter social-media-icon"></a>
+        <a href="#" class="fa fa-google social-media-icon"></a>
+        <a href="#" class="fa fa-linkedin social-media-icon"></a>
+        <a href="#" class="fa fa-instagram social-media-icon"></a>
+        <br>
+        <hr>
+        <div>
+            Have an account?
+            <a href="#" ng-click="showLogin()">Log in</a>
+        </div>
+    </form>
+ 
+    <form name="loginForm" ng-if="loginFormVisibility" ng-submit="loginClick(loginForm.$valid)">
+            Log in
+            <div class="field">
+                <label class="label">Email or Mobile Number</label>
+                <div class="control has-icons-left has-icons-right">
+                    <input class="input is-success" type="email" placeholder="Email or Mobile Number" ng-model="loginUser.username">
+                    <span class="icon is-small is-left">
+                        <i class="fa fa-envelope"></i>
+                    </span>
+                </div>
+                <!-- <p class="help is-success">This username is available</p> -->
+            </div>
+        
+            <div class="field">
+                <label class="label">Password</label>
+                <div class="control has-icons-left has-icons-right">
+                    <input class="input is-danger" type="password" placeholder="Password" ng-model="loginUser.password">
+                    <span class="icon is-small is-left">
+                        <i class="fa fa-lock"></i>
+                    </span>
+        
+                </div>
+                <!-- <p class="help is-danger">This email is invalid</p> -->
+            </div>
+        
+            <div class="field is-grouped">
+                <div class="control">
+                    <button type="submit" class="button is-link">Log in</button>
+                </div>
+            </div>
+        
+            <hr>
+            <div>
+                Don't have an account?
+                <a href="#" ng-click="showSignup()">Create New</a>
+            </div>
+        </form>
+    
+</div>
+
+
+<!--SignIn Ends-->
+</div>
+
+
+
+

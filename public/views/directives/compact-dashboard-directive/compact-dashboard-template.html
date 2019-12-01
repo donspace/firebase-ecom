@@ -1,0 +1,96 @@
+<div class="card">
+    
+    <div class="card-content">
+        <div class="level">
+            <div class="level-left">
+                <figure class="image is-96x96">
+                    <img  ng-src="{{dashboardUser.profilePicture}}" alt="Image">
+                </figure>
+            </div>
+            <div class="level-Rajitha">
+                <strong>{{dashboardUser.name}}</strong>
+
+            </div>
+
+        </div>
+
+        <!-- Profile completion -->
+        <div class="content" style="font-size:12px">
+            Complete your profile
+            <progress class="progress is-success" value="60" max="100">60sdfs%</progress>
+            <span class="icon has-text-info">
+                <i class="fa fa-user"></i>
+            </span>
+            <label class="cursorPointer" ng-click="profileCompletionFunctions.updateProfile()">Update your profile</label> <br>
+
+            <span class="icon has-text-info">
+                <i class="fa fa-star-half-o"></i>
+            </span>
+            Rate items<br>
+
+            <span class="icon has-text-info">
+                <i class="fa fa-share"></i>
+            </span>
+            Share with friends<br>
+
+            <span class="icon has-text-info">
+                <i class="fa fa-map-marker "></i>
+            </span>
+            Verify Location
+            <hr>
+            Or Directly go to,
+
+        </div>
+
+        <!-- Available shops -->
+        <div class="content">
+            <div class="box">
+                <div class="level">
+                    <div class="level-left">
+                        Greenwhere Mobiles
+                    </div>
+                    <div class="level-right">
+                            <a class="level-item">
+                                <span class="icon is-small">
+                                    <i class="fa fa-money"></i>
+                                </span>
+                            </a>
+                            <a class="level-item">
+                                    <span class="icon is-small">
+                                        <i class="fa fa-cog"></i>
+                                    </span>
+                            </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Posted Adds -->
+        <div class="content">
+            <div class="box">
+                <div class="level">
+                    <div class="level-left">
+                        IPhone 7 For Sale
+                    </div>
+                    <div class="level-right">
+                            <a class="level-item">
+                                <span class="icon is-small">
+                                    <i class="fa fa-money"></i>
+                                </span>
+                            </a>
+                            <a class="level-item">
+                                    <span class="icon is-small">
+                                        <i class="fa fa-pencil"></i>
+                                    </span>
+                            </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <footer class="card-footer">
+        <a class="card-footer-item" ng-click="postAdd_ButtonClick()">Post Your Add</a>
+        <a class="card-footer-item" ng-click="logoutClick()">Create Website</a>
+    </footer>
+</div>

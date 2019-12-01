@@ -1,0 +1,252 @@
+<div>
+
+    <div class="columns">
+        <div class="column is-1"> </div>
+        <div class="column is-10">
+            <br/>
+            <div>
+
+                <!-- Heading -->
+                <div class="columns">
+                    <div class="column is-12 ">
+                        <nav class="level">
+                            <!-- Left side -->
+                            <div class="level-left">
+                                <div class="level-item">
+                                    <div>
+                                        <div class="is-size-4-desktop is-inline">
+                                            {{advertisement.title}}
+                                        </div>
+                                        <div class="is-size-6-desktop is-inline">
+                                            {{advertisement.location.area}} ,
+                                        </div>
+                                        <div class="is-size-6-desktop is-inline">
+                                            {{advertisement.location.city}}
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- Right side -->
+                            <div class="level-right">
+
+                                <div class="level-item">
+                                    <div class="field">
+                                        <p class="control has-icons-right">
+                                            <input class="input" type="text" placeholder="Search more items">
+                                            <span class="icon is-small is-right">
+                                                <i class="fas fa-search"></i>
+                                            </span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+                <!-- Heading Ends -->
+
+                <div class="columns">
+                    <div class="column is-7">
+                        <div class="box">
+
+                            <ui-carousel slides="slides" slides-to-show="1" slides-to-scroll="1" dots="true" infinite="true">
+                                <carousel-item >
+                                    <!-- placed your item content here -->
+                                    <figure class='carousel-item has-background  image is-4by3' >
+                                            <img class="is-background" src={{item}} />
+                                    </figure>
+                                    <!-- <img src="{{item}}" alt="Image" /> -->
+                                    <!-- end -->
+                                </carousel-item>
+                            </ui-carousel>
+
+
+
+                            <!-- <div class='columns  carousel carousel-animated carousel-animate-slide' >
+                            <div class='carousel-container'>
+                                <figure class='carousel-item has-background  image is-4by3'  ng-repeat="imgRef in advertisement.imageReferences">
+                                    <img class="is-background" src={{imgRef}} />
+                                </figure>
+                                 <figure class='carousel-item has-background image is-4by3'>
+                                    <img class="is-background" src={{advertisement.imageReferences[0]}} />
+                                </figure>
+                                <figure class='carousel-item has-background image is-4by3'>
+                                        <img class="is-background" src={{advertisement.imageReferences[1]}} />
+                                    </figure>
+                                <figure class='carousel-item has-background image is-4by3' ng-repeat="">
+                                    <img class="is-background" src={{advertisement.imageReferences[2]}} />
+                                </figure> 
+                               <figure class='carousel-item has-background image is-4by3'>
+                                    <img class="is-background" src="resources/car-images/in.png" />
+                                </figure>
+                                <figure class='carousel-item has-background image is-4by3'>
+                                    <img class="is-background" src="resources/car-images/back.png" />
+                                </figure> 
+                            </div>
+                            <div class="carousel-navigation is-overlay">
+                                <div class="carousel-nav-left">
+                                    <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                                </div>
+                                <div class="carousel-nav-right">
+                                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div> -->
+
+
+                            <div class="columns is-hidden-mobile">
+                                <div class="column">
+                                    <figure class="image is-4by3" ng-swipe-left="swipeLeft()">
+                                        <img src={{advertisement.imageReferences[0]}}>
+                                    </figure>
+                                </div>
+                                <div class="column">
+                                    <figure class="image is-4by3">
+                                        <img src={{advertisement.imageReferences[1]}}>
+                                    </figure>
+                                </div>
+                                <div class="column">
+                                    <figure class="image is-4by3">
+                                        <img src={{advertisement.imageReferences[2]}}>
+                                    </figure>
+                                </div>
+                                <div class="column">
+                                    <figure class="image is-4by3">
+                                        <img src={{advertisement.imageReferences[3]}}>
+                                    </figure>
+                                </div>
+                                <div class="column">
+                                    <figure class="image is-4by3">
+                                        <img src={{advertisement.imageReferences[4]}}>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="column is-5">
+                        <div class="box">
+                            <div class="is-size-5-desktop is-inline">Rs</div>
+                            <div class="is-size-2-desktop is-inline">5,800,000</div>
+                            <div class="is-size-6-desktop is-inline">Negotiable</div>
+                            <div class="is-size-6-desktop ">Posted By : Rajitha Dissanayake on 26 May 2018</div>
+                        </div>
+                        <div class="box">
+                            <!-- Description -->
+                            <div>
+
+                                <div>
+                                    <i class="fas fa-info-circle is-inline"></i>
+                                    <span class="is-inline is-size-6-desktop"> Automatic Transmission</span>
+                                </div>
+
+                                <div>
+                                    <i class="fas fa-info-circle is-inline"></i>
+                                    <span class="is-inline is-size-6-desktop"> Automatic Transmission</span>
+                                </div>
+
+                                <div>
+                                    <i class="fas fa-info-circle is-inline"></i>
+                                    <span class="is-inline is-size-6-desktop"> Automatic Transmission</span>
+                                </div>
+                                <div>
+                                    <i class="fas fa-info-circle is-inline"></i>
+                                    <span class="is-inline is-size-6-desktop"> Automatic Transmission</span>
+                                </div>
+
+                                <div>
+                                    <i class="fas fa-info-circle is-inline"></i>
+                                    <span class="is-inline is-size-6-desktop"> Automatic Transmission</span>
+                                </div>
+
+                                <div>
+                                    <i class="fas fa-info-circle is-inline"></i>
+                                    <span class="is-inline is-size-6-desktop"> Automatic Transmission</span>
+                                </div>
+                                <div>
+                                    <i class="fas fa-info-circle is-inline"></i>
+                                    <span class="is-inline is-size-6-desktop"> Automatic Transmission</span>
+                                </div>
+
+                                <div>
+                                    <i class="fas fa-info-circle is-inline"></i>
+                                    <span class="is-inline is-size-6-desktop"> Automatic Transmission</span>
+                                </div>
+
+                                <div>
+                                    <i class="fas fa-info-circle is-inline"></i>
+                                    <span class="is-inline is-size-6-desktop"> Automatic Transmission</span>
+                                </div>
+                                <div>
+                                    <i class="fas fa-info-circle is-inline"></i>
+                                    <span class="is-inline is-size-6-desktop"> Automatic Transmission</span>
+                                </div>
+
+                                <div>
+                                    <i class="fas fa-info-circle is-inline"></i>
+                                    <span class="is-inline is-size-6-desktop"> Automatic Transmission</span>
+                                </div>
+
+                                <div>
+                                    <i class="fas fa-info-circle is-inline"></i>
+                                    <span class="is-inline is-size-6-desktop"> Automatic Transmission</span>
+                                </div>
+                                <div>
+                                    <i class="fas fa-info-circle is-inline"></i>
+                                    <span class="is-inline is-size-6-desktop"> Automatic Transmission</span>
+                                </div>
+
+                                <div>
+                                    <i class="fas fa-info-circle is-inline"></i>
+                                    <span class="is-inline is-size-6-desktop"> Automatic Transmission</span>
+                                </div>
+
+                                <p class="is-size-5-desktop">Description</p>
+                                <p class="is-size-6-desktop">
+                                    {{advertisement.description}}
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div ui-view></div>
+        </div>
+    </div>
+    <div class="column is-1"></div>
+</div>
+</div>
+
+
+
+<!-- <div>
+
+    <div class="columns">
+        <div class="column is-1"> </div>
+        <div class="column is-10">
+
+            <div class="box">
+                <div class="columns">
+                    <div class="column is-7 ">
+                        <div class="is-size-4-desktop">
+                                Q2 Sport 2018 Auto Gear Alloy Wheel 1000cc
+                        </div> 
+                        
+                    </div>
+                    <div class="column is-5 ">
+                        <div class="is-size-6-desktop has-text-right">
+                                Godagama , Colombo  26 May 2018
+                        </div> 
+                    </div>
+
+                </div>
+                <div ui-view></div>
+            </div>
+        </div>
+        <div class="column is-1"></div>
+    </div>
+</div> -->

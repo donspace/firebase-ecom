@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+<head>
+  <meta charset="utf-8">
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{"app_title" | translate }}</title>
+
+  <!-- <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script> -->
+  <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-functions.js"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsJ47LCNnAJrYB4aZgoCPx8bp6x-6lAlY&libraries=places"></script>
+
+
+  <script>
+    // var config = {
+    //   apiKey: "AIzaSyD7I0BqF07JMsLNssnfgJHI95b4p5gcKdY",
+    //   authDomain: "downtown-firebase.firebaseapp.com",
+    //   databaseURL: "https://downtown-firebase.firebaseio.com",
+    //   projectId: "downtown-firebase",
+    //   storageBucket: "downtown-firebase.appspot.com",
+    //   messagingSenderId: "188869978615"
+    // };
+    // firebase.initializeApp(config);
+    // // Initialize Cloud Firestore through Firebase
+    // // var db = firebase.firestore();
+    // console.log("firebase :",firebase);
+  </script>
+
+
+  <!-- AngularJS -->
+
+
+
+  <!-- SemanticUI -->
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.1/dist/semantic.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.1/dist/semantic.min.js"></script> -->
+
+
+
+  <!-- Bulma -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+  <script type="text/javascript" src="https://wikiki.github.io/node_modules/bulma-extensions/bulma-steps/dist/bulma-steps.min.js"></script>
+  <link rel="stylesheet" href="libs/bulma/bulma-steps.min.css">
+  <script type="text/javascript" src="libs/bulma/bulma-carousel.min.js"></script>
+  <link rel="stylesheet" href="libs/bulma/bulma-carousel.min.css">
+  <link rel="stylesheet" href="libs/bulma/bulma-pricing-table.min.css">
+
+  <!-- Angular Material -->
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.8/angular-material.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="//unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-aria.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-messages.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.8/angular-material.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="libs/css/common-styles.css">
+  <link rel="stylesheet" href="libs/css/template-css/login.css">
+
+
+  <script src="app.js"></script>
+  <script src="views/routes.js"></script>
+
+  <!-- Librabies -->
+  <script src="libs/directives/file-upload-directive.js"></script>
+  <script src="https://sdk.amazonaws.com/js/aws-sdk-2.283.1.min.js"></script>
+
+  <!-- Constants -->
+  <script src="config/config-constant.js"></script>
+  <script src="utils/translations/translation-sinhala-constant.js"></script>
+  <script src="utils/translations/translation-english-constant.js"></script>
+
+
+
+
+  <!-- Public Node Modules -->
+  <script src="node_modules/angular-translate/dist/angular-translate.min.js"></script>
+  <script src="node_modules/lockr/lockr.min.js"></script>
+  <script src="node_modules/angular-ui-carousel/dist/ui-carousel.min.js"></script>
+  <link rel="stylesheet" href="node_modules/angular-ui-carousel/dist/ui-carousel.min.css">
+
+  <!-- Utils -->
+  <script src="utils/helper-functions.js"></script>
+
+  <!-- controllers -->
+  <script src="views/home/root-controller.js"></script>
+  <script src="views/user/login-controller.js"></script>
+  <script src="views/home/home-controller.js"></script>
+  <script src="views/home/search-controller.js"></script>
+  <script src="views/settings/settings-controller.js"></script>
+  <script src="views/advertisement/create-advertisement/create-ad-factory.js"></script>
+  <script src="views/advertisement/create-advertisement/category-controller.js"></script>
+  <script src="views/advertisement/create-advertisement/details-controller.js"></script>
+  <script src="views/advertisement/create-advertisement/verify-controller.js"></script>
+  <script src="views/advertisement/view-advertisement/view-advertisement-controller.js"></script>
+  <script src="views/forum/forum-controller.js"></script>
+  <script src="views/business-page/business-page-controller.js"></script>
+
+  <!-- directives -->
+  <script src="views/directives/signup-directive/signup-directive.js"></script>
+  <script src="views/directives/compact-dashboard-directive/compact-dashboard-directive.js"></script>
+  <script src="views/directives/header-bar-directive/header-bar-directive.js"></script>
+  <script src="views/directives/header-bar-directive/search-header-bar-directive.js"></script>
+  <script src="views/directives/search-item-directive/search-item-directive.js"></script>
+  <script src="views/directives/dynamic-modal-directive/dynamic-modal-directive.js"></script>
+  <script src="views/directives/automated-tab-directive/automated-tab-directive.js"></script>
+  <script src="views/directives/google-map-autocomplete-directive/google-map-autocomplete-directive.js"></script>
+  <!-- <script src="views/directives/clickable-item-directive/clickable-item-directive.js"></script> -->
+
+  <!-- Interfaces -->
+  <script src="business-logics/user-manager.js"></script>
+  <script src="business-logics/configuration-manager.js"></script>
+  <script src="business-logics/advertisement-manager.js"></script>
+
+  <!-- Services -->
+  <script src="services/firebase/fb-auth-service.js"></script>
+  <script src="services/firebase/fb-firestore-service.js"></script>
+  <script src="services/firebase/fb-functions-service.js"></script>
+  <script src="services/digital-ocean/do-spaces-service.js"></script>
+
+  <!-- <script src="views/constants/post-add-constant.js"></script> -->
+
+</head>
+
+<body>
+  <ui-view></ui-view>
+</body>
+
+
+</html>

@@ -1,0 +1,46 @@
+<div>
+    <!--Bootstrap Start-->
+    <div>
+        <!--1 columns-->
+        <header-bar ng-if="isLogged"></header-bar>
+        <div class="columns">
+            <div class="column is-4"></div>
+            <div class="column is-4"></div>
+            <div class="column is-4"></div>
+        </div>
+        <!--1 columns Ends-->
+
+        <!--2 columns-->
+        <div class="columns">
+
+            <div class="column is-1"></div>
+            <div class="column is-8">
+                <div>
+                    <search-bar status="homeStatus"></search-bar>
+                </div>
+
+                <div class="category-container">
+                    <category-grid ng-if='homeStatus.state=="initial" '></category-grid>
+                    <search-results ng-if='homeStatus.state=="onSearch"'></search-results>
+                </div>
+
+              
+
+            </div>
+
+            <div class="column is-3">
+                <sign-up ng-if="!isLogged"></sign-up>
+                <compact-dashboard ng-if="isLogged"></compact-dashboard>
+            </div>
+            <!--2 columns Ends-->
+
+            <!--3 columns -->
+            <div class="columns">
+                <div class="column is-4"></div>
+                <div class="column is-4"></div>
+                <div class="column is-4"></div>
+            </div>
+            <!--3 columns Ends-->
+        </div>
+
+    </div>

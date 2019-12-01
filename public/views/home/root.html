@@ -1,0 +1,158 @@
+<div>
+
+    <!-- Desktop UI ------------------------------------------------------------------- -->
+    <!-- /////////////////////////////////////////////////////////////////////////////// -->
+    <div class="is-hidden-touch">
+        <!-- Header Bar -->
+        <nav class="navbar is-transparent">
+            <div id="navbarExampleTransparentExample" class="navbar-menu">
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="field is-grouped">
+                            <p class="control">
+                                <a class="bd-tw-button button" data-social-network="Twitter" target="_blank" ng-click="onClickForum()">
+                                    <span class="icon" style="color:blue">
+                                        <i class="fas fa-home"></i>
+                                    </span>
+                                    <span>
+                                        Forum
+                                    </span>
+                                </a>
+                            </p>
+                            <p class="control">
+                                <a class="bd-tw-button button" data-social-network="Twitter" target="_blank" ng-click="onClickOpenOnlineStore()">
+                                    <span class="icon" style="color:orange">
+                                        <i class="fas fa-home"></i>
+                                    </span>
+                                    <span>
+                                        Open Online Store
+                                    </span>
+                                </a>
+                            </p>
+                            <p class="control">
+                                <a class="button" ng-click="onClickPostAd()">
+                                    <span class="icon" style="color:orange">
+                                        <i class="fas fa-paper-plane"></i>
+                                    </span>
+                                    <span>Post Your Ad</span>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Header Bar Ends -------------------------------------->
+
+        <div class="columns">
+            <div class="column is-2"></div>
+            <div class="column is-8">
+                <form ng-submit="onClickSearch()">
+                    <center>
+                        <br/>
+                        <br/>
+                        <figure class="image is-128x128">
+                            <img src="resources/branding/chakra.png">
+                        </figure>
+                        <br/>
+                        <br/>
+                        <div class="field" style="width:550px">
+                            <p class="control has-icons-right is-expanded">
+                                <input class="input" type="text" ng-model="searchText" placeholder="Search items , type the model brand or any thing">
+
+                                <span class="icon is-small is-right">
+                                    <i class="fas fa-search"></i>
+                                </span>
+                            </p>
+                        </div>
+                        <button class="button is-warning" type="submit">
+                            <span class="icon">
+                                <i class="fas fa-search"></i>
+                            </span>
+                            <span>Search</span>
+                        </button>
+                    </center>
+                </form>
+
+            </div>
+            <div class="column is-2"></div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Mobile UI ------------------------------------------------------------------- -->
+    <!-- ///////////////////////////////////////////////////////////////////////////////// -->
+    <div class="is-hidden-desktop">
+        <!-- Header Bar -->
+        <nav class="navbar is-transparent">
+            <div id="navbarExampleTransparentExample" class="navbar-menu">
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="field is-grouped">
+                            <p class="control">
+                                <a class="bd-tw-button button" data-social-network="Twitter" target="_blank">
+                                    <span class="icon" style="color:orange">
+                                        <i class="fas fa-home"></i>
+                                    </span>
+                                    <span>
+                                        Open Online Store
+                                    </span>
+                                </a>
+                            </p>
+                            <p class="control">
+                                <a class="button">
+                                    <span class="icon" style="color:orange">
+                                        <i class="fas fa-paper-plane"></i>
+                                    </span>
+                                    <span>Post Your Ad</span>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Header Bar Ends -------------------------------------->
+
+        <div class="section is-vertical-paddingless">
+            <div class="columns">
+                <div class="column is-2"></div>
+                <div class="column is-8">
+                    <form ng-submit="onClickSearch()">
+                        <center>
+
+                            <figure class="image is-64x64">
+                                <img src="resources/branding/chakra.png">
+                            </figure>
+                            <br/>
+
+                            <div class="field">
+                                <p class="control has-icons-right is-expanded">
+                                    <input class="input" type="text" ng-model="searchText" placeholder="Search items , type the model brand or any thing">
+
+                                    <span class="icon is-small is-right">
+                                        <i class="fas fa-search"></i>
+                                    </span>
+                                </p>
+                            </div>
+                            <button class="button is-warning" type="submit">
+                                <span class="icon">
+                                    <i class="fas fa-search"></i>
+                                </span>
+                                <span>Search</span>
+                            </button>
+                        </center>
+                    </form>
+
+                </div>
+                <div class="column is-2"></div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+</div>

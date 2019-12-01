@@ -1,0 +1,34 @@
+.clickable-item-click :active {
+    background-color: black !important
+}
+
+.clickable-item-click :focus {
+    background-color: black !important
+}
+
+.settings-pic :hover{
+    filter:blur(5px);
+}
+
+.settings-pic-container{
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.settings-pic-upload{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.test-color{
+    color: red;
+}
+
+.is-vertical-paddingless{
+    padding-top:0 !important;
+    padding-bottom: 0 !important;
+}	
+

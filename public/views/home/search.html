@@ -1,0 +1,132 @@
+<div>
+    <!-- Desktop UI ------------------------------------------------------------------- -->
+    <!-- /////////////////////////////////////////////////////////////////////////////// -->
+    <div class="is-hidden-touch">
+        <search-header-bar></search-header-bar>
+        <div class="columns">
+            <div class="column is-1"></div>
+            <div class="column is-6">
+                <div style="background-color:yellowgreen">
+                    Filters
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                </div>
+                <br/>
+                <br/>
+
+                <div ng-repeat="result in searchResults" ng-click="onClickItem(result)">
+                    <search-item></search-item>
+                    <br/>
+                    <br/>
+                </div>
+
+
+            </div>
+            <div class="column is-5" style="background-color:yellow">
+                Analytics and Promoting
+            </div>
+        </div>
+
+        <!-- footer -->
+        <div class="columns">
+            <div class="column is-1"></div>
+            <div class="column is-6">
+                <nav class="pagination" role="navigation" aria-label="pagination">
+                    <a class="pagination-previous" title="This is the first page" disabled>Previous</a>
+                    <a class="pagination-next">Next page</a>
+                    <ul class="pagination-list">
+                        <li>
+                            <a class="pagination-link is-current" aria-label="Page 1" aria-current="page">1</a>
+                        </li>
+                        <li>
+                            <a class="pagination-link" aria-label="Goto page 2">2</a>
+                        </li>
+                        <li>
+                            <a class="pagination-link" aria-label="Goto page 3">3</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="column is-5" style="background-color:yellow">
+                Analytics and Promoting
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Mobile UI ------------------------------------------------------------------- -->
+    <!-- ///////////////////////////////////////////////////////////////////////////////// -->
+    <div class="is-hidden-desktop">
+        <search-header-bar></search-header-bar>
+        <div class="columns">
+            <div class="column is-1"></div>
+            <div class="column is-6">
+                <div style="background-color:yellowgreen">
+                    Filters
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                </div>
+                <br/>
+                <br/>
+
+                <div ng-repeat="result in searchResults" ng-click="onClickItem(result)">
+                    <search-item></search-item>
+                    <br/>
+                    <br/>
+                </div>
+
+
+            </div>
+            <div class="column is-5" style="background-color:yellow">
+                Analytics and Promoting
+            </div>
+        </div>
+
+        <!-- footer -->
+        <div class="columns">
+            <div class="column is-1"></div>
+            <div class="column is-6">
+                <nav class="pagination" role="navigation" aria-label="pagination">
+                    <a class="pagination-previous" title="This is the first page" disabled>Previous</a>
+                    <a class="pagination-next">Next page</a>
+                    <ul class="pagination-list">
+                        <li>
+                            <a class="pagination-link is-current" aria-label="Page 1" aria-current="page">1</a>
+                        </li>
+                        <li>
+                            <a class="pagination-link" aria-label="Goto page 2">2</a>
+                        </li>
+                        <li>
+                            <a class="pagination-link" aria-label="Goto page 3">3</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="column is-5" style="background-color:yellow">
+                Analytics and Promoting
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<!-- style="background-color:palegreen" -->

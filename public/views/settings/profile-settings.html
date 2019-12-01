@@ -1,0 +1,218 @@
+<!-- 
+    Prototype
+
+<div class="columns">
+    <div class="column is-6">
+        <div class="columns">
+            <div class="column is-10"></div>
+            <div class="column is-2 is-hidden-mobile"></div>
+        </div>
+    </div>
+    <div class="column is-6">
+        <div class="columns">
+            <div class="column is-1 is-hidden-mobile"></div>
+            <div class="column is-10"></div>
+            <div class="column is-1 is-hidden-mobile"></div>
+        </div>
+    </div>
+</div>
+ -->
+ <div class="subtitle">Public Profile</div>
+
+<div class="columns">
+    <div class="column is-6">
+        <div class="columns">
+
+            <div class="column is-10">
+                <div class="field">
+                    <label class="label">Name</label>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="Text input" ng-readonly="isLocked" ng-model="profileSettings.displayName" >
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">Username</label>
+                    <div class="control has-icons-left has-icons-right">
+                        <input class="input is-success" type="text" placeholder="Text input" ng-model="profileSettings.username" ng-readonly="isLocked">
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-user"></i>
+                        </span>
+                        <span class="icon is-small is-right">
+                            <i class="fas fa-check"></i>
+                        </span>
+                    </div>
+                    <p class="help is-success">This username is available</p>
+                </div>
+
+
+
+
+
+                <div class="field">
+                    <label class="label">Gender</label>
+                    <div class="control">
+                        <div class="select">
+                            <select ng-readonly="isLocked" ng-model="profileSettings.gender">
+                                <option>Not Specified</option>
+                                <option>Male</option>
+                                <option>Female</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="column is-2 is-hidden-mobile"></div>
+        </div>
+
+    </div>
+
+
+    <!--
+        Profile picture colums  ----------------------------------------
+    -->
+    <div class="column is-6">
+        <div class="columns">
+            <div class="column is-1 is-hidden-mobile"></div>
+            <div class="column is-10">
+                <div class="field">
+                    <label class="label">Profile Picture</label>
+                    <div class="control bg">
+                        <figure class="image is-128x128 settings-pic settings-pic-container file-input" type="file">
+                            <img src="https://cdn-images-1.medium.com/max/1200/0*8haJOftd3teyDQfF.">
+                            <div class="settings-pic-upload">
+
+                                <label class="file-label">
+                                    <input class="file-input" style="background-color:blue" type="file" name="resume" ng-readonly="isLocked">
+
+                                    <span class="file-icon">
+                                        <i class="fas fa-upload"></i>
+                                    </span>
+
+                                </label>
+
+                            </div>
+                        </figure>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="columns is-1 is-hidden-mobile"></div>
+        </div>
+
+    </div>
+
+
+</div>
+
+<!--
+    Contacts segment
+-->
+
+<hr/>
+<div class="subtitle">Contacts</div>
+<div class="columns">
+    <div class="column is-6">
+        <div class="columns">
+            <div class="column is-10">
+
+                <div class="field">
+                    <label class="label">Address line 1</label>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="Text input" ng-readonly="isLocked" ng-model="profileSettings.address.line1">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Address Line 2</label>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="Text input" ng-readonly="isLocked" ng-model="profileSettings.address.line2">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">street</label>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="Text input" ng-readonly="isLocked" ng-model="profileSettings.address.street">
+                    </div>
+                </div>
+                <div class="columns">
+                    <div class="column is-6">
+                        <div class="field">
+                            <label class="label">city</label>
+                            <div class="control">
+                                <input class="input" type="text" placeholder="Text input" ng-readonly="isLocked" ng-model="profileSettings.address.city">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-6">
+                        <div class="field">
+                            <label class="label">Postal Code</label>
+                            <div class="control">
+                                <input class="input" type="text" placeholder="Text input" ng-readonly="isLocked" ng-model="profileSettings.address.postalCode">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">province</label>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="Text input" ng-readonly="isLocked" ng-model="profileSettings.address.province">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Country</label>
+                    <div class="control">
+                        <div class="select">
+                            <select disabled ng-model="profileSettings.country">
+                                <option>Sri Lanka</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column is-2"></div>
+        </div>
+    </div>
+    <div class="column is-6">
+        <div class="columns">
+            <div class="column is-1"></div>
+            <div class="column is-10">
+                <div class="field">
+                    <label class="label">email</label>
+                    <div class="control has-icons-left has-icons-right">
+                        <input class="input is-danger" type="email" placeholder="Email input" value="hello@" ng-readonly="isLocked" ng-model="profileSettings.email">
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-envelope"></i>
+                        </span>
+                        <span class="icon is-small is-right">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </span>
+                    </div>
+                    <!-- <p class="help is-danger">This email is invalid</p> -->
+                </div>
+                <div class="field">
+                    <label class="label">Contact Number</label>
+                    <div class="field-body">
+                        <div class="field is-expanded">
+                            <div class="field has-addons">
+                                <p class="control">
+                                    <a class="button is-static">
+                                        +94
+                                    </a>
+                                </p>
+                                <p class="control is-expanded">
+                                    <input class="input" type="tel" placeholder="Your phone number" ng-readonly="isLocked" ng-model="profileSettings.contactNumber">
+                                </p>
+                            </div>
+                            <p class="help">Do not enter the first zero</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column is-1"></div>
+        </div>
+    </div>
+</div>

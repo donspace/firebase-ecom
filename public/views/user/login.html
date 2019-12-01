@@ -1,0 +1,97 @@
+<section class="hero login-background is-fullheight">
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <div class="column is-4 is-offset-4">
+                <div ng-if="uiState=='create'">
+                            <h3 class="title has-text-grey">Create Account</h3>
+                            <p class="subtitle has-text-grey">Please create new account to proceed.</p>
+                </div>
+                <div ng-if="uiState=='login'">
+                            <h3 class="title has-text-grey">Login</h3>
+                            <p class="subtitle has-text-grey">Please Login here to proceed.</p>
+               </div>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <div class="box">
+                    <center>
+                        <figure class="avatar image is-128x128">
+                            <img src="resources/img/login-avatar.png">
+                        </figure>
+                    </center>
+
+                    <form ng-if="uiState=='create'" ng-submit="onClickSignup()">
+                        <div class="field">
+                            <div class="control">
+                                <input class="input is-large" ng-model="newUser.username" type="text" placeholder="Email or Mobile Number" autofocus="">
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <div class="control">
+                                <input class="input is-large" ng-model="newUser.displayName" type="text" placeholder="Name" autofocus="">
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <div class="control">
+                                <input class="input is-large" ng-model="newUser.password" type="password" placeholder="Password">
+                            </div>
+                        <br/>
+                        <button type="submit" class="button is-block is-info is-large is-fullwidth">Create</button>
+                        </div>
+                    </form>
+
+                    <form ng-if="uiState=='login'" ng-submit="onClickLogin()">
+                        <div class="field">
+                            <div class="control">
+                                <input class="input is-large" ng-model="loginUser.username" type="text" placeholder="Your Email or Mobile Number" autofocus="">
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <div class="control">
+                                <input class="input is-large" ng-model="loginUser.password" type="password" placeholder="Your Password">
+                            </div>
+                        </div>
+                        <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+                            <md-button class="md-fab md-primary" aria-label="Facebook" ng-click="onClickFacebook()">
+                                <md-icon  md-svg-src="resources/icon/fb.svg"></md-icon>
+                            </md-button>
+                    
+                            <md-button class="md-fab md-primary" aria-label="Twitter" ng-click="onClickTwitterSignin()">
+                              <md-icon md-svg-src="resources/icon/twitter.svg"></md-icon>
+                            </md-button>
+
+                            <md-button class="md-fab md-primary" aria-label="LinkedIn">
+                                    <md-icon md-svg-src="resources/icon/linkedin.svg"></md-icon>
+                                </md-button>
+                    
+                            <md-button class="md-fab md-primary" aria-label="Gplus" ng-click="onClickGmailSignin()">
+                                <md-icon md-svg-src="resources/icon/gplus.svg"></md-icon>
+                            </md-button>
+                        </section>
+                        <div class="field">
+                            <label class="checkbox">
+                                <input type="checkbox"> Remember me
+                            </label>
+                        </div>
+                        <button class="button is-block is-info is-large is-fullwidth">Login</button>
+                        
+                    </form>
+                </div>
+                <p class="has-text-grey" ng-if="uiState=='create'" ng-click="onClickExistingUser()">
+                    already have an account?
+                    <a>Login</a> &nbsp;·&nbsp;
+                    <!-- <a href="../">Forgot Password</a> &nbsp;·&nbsp; -->
+                </p>
+                <p class="has-text-grey" ng-if="uiState=='login'" ng-click="onClickNewUser()">
+                    New to square?
+                    <a>Create Account</a> &nbsp;·&nbsp;
+                    <!-- <a href="../">Forgot Password</a> &nbsp;·&nbsp; -->
+                </p>
+            </div>
+        </div>
+    </div>
+</section>

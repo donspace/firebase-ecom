@@ -1,0 +1,253 @@
+<div class="field is-horizontal">
+    <div class="field-label is-normal">
+        <label class="label">Contacts</label>
+    </div>
+    <div class="field-body columns">
+
+        <div class="field column is-5">
+            <p class="control is-expanded has-icons-left has-icons-right">
+                <input class="input is-success" type="email" placeholder="Email" ng-model="advertisement.advertisementContacts.email">
+                <span class="icon is-small is-left">
+                    <i class="fa fa-envelope"></i>
+                </span>
+                <span class="icon is-small is-right">
+                    <i class="fa fa-check"></i>
+                </span>
+            </p>
+        </div>
+
+        <div class="field is-expanded column is-5">
+            <div class="field has-addons">
+                <p class="control">
+                    <a class="button is-static">
+                        +94
+                    </a>
+                </p>
+                <p class="control is-expanded">
+                    <input class="input" type="tel" placeholder="Phone number" ng-model="advertisement.advertisementContacts.phoneNumber">
+                </p>
+            </div>
+            <p class="help">Do not enter the first zero</p>
+        </div>
+        <div class="column is-2"></div>
+    </div>
+</div>
+
+<div class="field is-horizontal">
+    <div class="field-label is-normal">
+        <label class="label">Location</label>
+    </div>
+    <div class="field-body columns">
+
+        <div class="field column is-5">
+            <div class="control">
+
+                <input class="input is-primary" type="text" placeholder="Primary input" ng-model="chosenPlace" details="advertisement.advertisementLocation"
+                    google-map-autocomplete>
+
+            </div>
+        </div>
+
+        <div class="column is-7"></div>
+
+    </div>
+</div>
+
+
+<!-- Metrics -->
+<div class="field is-horizontal" ng-if="adMetadata.metricType">
+    <div class="field-label">
+        <label class="label">Quantity</label>
+    </div>
+    <div class="field-body columns">
+        <div class="field has-addons column is-6">
+            <p class="control">
+
+                <md-select ng-model="advertisement.pricing.unitType" style="margin-top:0">
+                    <md-option ng-repeat="met in adMetadata.metricList" ng-value="met">
+                        {{met}}
+                    </md-option>
+                </md-select>
+            </p>
+            <p class="control">
+                <input class="input" type="text" placeholder="Quantity" ng-model="advertisement.pricing.price">
+            </p>
+
+        </div>
+
+    </div>
+</div>
+
+
+<div class="field is-horizontal">
+    <div class="field-label">
+        <label class="label">Price</label>
+    </div>
+    <div class="field-body columns">
+        <div class="field has-addons column is-6">
+            <p class="control" ng-if="adMetadata.metricType">
+
+                <md-select ng-model="advertisement.pricing.isUnitPrice" style="margin-top:0">
+                    <md-option ng-value="true">Per Unit</md-option>
+                    <md-option ng-value="false">Whole Amount</md-option>
+                </md-select>
+            </p>
+            <p class="control">
+                <input class="input" type="text" placeholder="Amount of money" ng-disabled="advertisement.pricing.askForPrice" ng-model="advertisement.pricing.price">
+            </p>
+
+        </div>
+        <div class="field has-addons column is-6">
+            <md-switch ng-model="advertisement.pricing.isNegotiable" aria-label="Negotiable">
+                    Negotiable
+            </md-switch>
+            <md-switch ng-model="advertisement.pricing.askForPrice" aria-label="Ask for price">
+                    Ask for Price
+            </md-switch>
+
+        </div>
+    </div>
+</div>
+
+<div class="field is-horizontal" ng-repeat="property in adMetadata.properties">
+    <div class="field-label">
+        <label class="label">{{property.propName.default}}</label>
+    </div>
+    <div class="field-body columns">
+
+        <!-- bool  -->
+        <div class="field has-addons column is-6" ng-if="property.type =='bool' ">
+            <p class="control">
+                <md-switch style="margin-top:0" ng-model="advertisement.properties[property.adPropertyId]" aria-label="Switch 1">
+                </md-switch>
+            </p>
+
+        </div>
+
+        <!-- single select  -->
+        <div class="field has-addons column is-6" ng-if="property.type =='single_select' ">
+            <p class="control">
+                <md-select ng-model="advertisement.properties[property.adPropertyId]" style="margin-top:0">
+                    <md-option><em>None</em></md-option>
+                    <md-option ng-repeat="(sinListId,sinListCaption) in property.list" ng-value="sinListCaption">
+                        {{sinListCaption}}
+                    </md-option>
+                </md-select>
+            </p>
+
+        </div>
+
+        <!-- multiple select  -->
+        <div class="field has-addons column is-6" ng-if="property.type =='multi_select'">
+            <p class="control">
+                <md-select ng-model="advertisement.properties[property.adPropertyId]" style="margin-top:0" multiple>
+                    <md-option ng-repeat="(sinListId,sinListCaption) in property.list" ng-value="sinListCaption">
+                        {{sinListCaption}}
+                    </md-option>
+                </md-select>
+            </p>
+
+        </div>
+
+        <!-- text select  -->
+        <div class="field has-addons column is-6" ng-if="property.type =='text'">
+            <p class="control">
+                <input class="input" ng-model="advertisement.properties[property.adPropertyId]" type="text">
+            </p>
+
+        </div>
+
+    </div>
+</div>
+<div class="field is-horizontal">
+    <div class="field-label">
+        <label class="label">Photos</label>
+    </div>
+    <div class="field-body">
+        <div class="field has-addons ">
+            <div class="file">
+                <label class="file-label">
+                    <!-- <input class="file-input"  type="file" ng-model="adImages" multiple> -->
+                    <!-- <button ng-click = "uploadFile()">Upload File</button> -->
+                    <input type="file" file-model="adImages" multiple />
+                    <!-- <button ng-click="uploadFile(adImages)">Upload File</button> -->
+                    
+                </label>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<div class="field is-horizontal">
+    <div class="field-label">
+
+    </div>
+    <div class="field-body">
+        <div class="field has-addons ">
+            <figure class="image is-128x128" ng-repeat="lImgSrc in localImageSrcs">
+                <img src={{lImgSrc}}>
+            </figure>
+            <!-- <figure class="image is-128x128">
+                <img src="https://bulma.io/images/placeholders/256x256.png">
+            </figure>
+            <figure class="image is-128x128">
+                <img src="https://bulma.io/images/placeholders/256x256.png">
+            </figure>
+            <figure class="image is-128x128">
+                <img src="https://bulma.io/images/placeholders/256x256.png">
+            </figure>
+            <figure class="image is-128x128">
+                <img src="https://bulma.io/images/placeholders/256x256.png">
+            </figure> -->
+
+        </div>
+
+    </div>
+</div>
+
+<div class="field is-horizontal">
+    <div class="field-label is-normal">
+        <label class="label">Title</label>
+    </div>
+    <div class="field-body columns">
+        <div class="field column is-6">
+            <div class="control">
+                <input class="input is-danger" type="text" placeholder="e.g. Partnership opportunity" ng-model="advertisement.title">
+            </div>
+            <p class="help is-danger">
+                This field is required
+            </p>
+        </div>
+        <div class="field column is-6"></div>
+    </div>
+</div>
+
+<div class="field is-horizontal">
+    <div class="field-label is-normal">
+        <label class="label">Description</label>
+    </div>
+    <div class="field-body">
+        <div class="field">
+            <div class="control">
+                <textarea class="textarea" placeholder="Explain how we can help you" ng-model="advertisement.description"></textarea>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="field is-horizontal">
+    <div class="field-label">
+        <!-- Left empty for spacing -->
+    </div>
+    <div class="field-body">
+        <div class="field">
+            <div class="control">
+                <button class="button is-warning" ng-click="postAdvertisement_Click(advertisement,adImages)">
+                    Create Advertisement
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
